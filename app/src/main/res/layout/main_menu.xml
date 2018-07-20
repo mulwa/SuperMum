@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            style="@style/outer_linearLayout"
+            android:id="@+id/first_row">
+
+            <RelativeLayout
+                style="@style/inner_relative_layout"
+                android:id="@+id/rl_diet"
+                android:background="@color/colorPrimaryDark">
+                <TextView
+                    style="@style/Menu_tv"
+                    android:text="Diet"/>
+            </RelativeLayout>
+            <RelativeLayout
+                style="@style/inner_relative_layout"
+                android:id="@+id/rl_do_donts"
+                android:background="@color/colorPrimary">
+                <TextView
+                    style="@style/Menu_tv"
+                    android:text="Do and Donts"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/outer_linearLayout"
+            android:layout_below="@+id/first_row"
+            android:id="@+id/second_row">
+
+            <RelativeLayout
+                style="@style/inner_relative_layout"
+                android:id="@+id/rl_progress"
+                android:background="@color/bg_color">
+                <TextView
+                    style="@style/Menu_tv"
+                    android:text="Week by Week Progress"/>
+            </RelativeLayout>
+            <RelativeLayout
+                style="@style/inner_relative_layout"
+                android:id="@+id/rl_yoga"
+                android:background="@color/colorAccent">
+                <TextView
+                    style="@style/Menu_tv"
+                    android:text="Yoga"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/third_row"
+            style="@style/outer_linearLayout"
+            android:layout_below="@+id/second_row">
+
+            <RelativeLayout
+                style="@style/inner_relative_layout"
+                android:id="@+id/rl_emmergency"
+                android:background="@color/colorPrimaryDark">
+                <TextView
+                    style="@style/Menu_tv"
+                    android:text="Emmergency"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/outer_linearLayout"
+            android:layout_below="@+id/third_row"
+            android:id="@+id/forth_row">
+
+            <RelativeLayout
+                style="@style/inner_relative_layout"
+                android:id="@+id/rl_appointments"
+                android:background="@color/deep_orange">
+                <TextView
+                    style="@style/Menu_tv"
+                    android:text="Appointments"/>
+            </RelativeLayout>
+            <RelativeLayout
+                style="@style/inner_relative_layout"
+                android:id="@+id/rl_reminder"
+                android:background="@color/colorAccent">
+                <TextView
+                    style="@style/Menu_tv"
+                    android:text="Reminder"/>
+            </RelativeLayout>
+            <RelativeLayout
+                style="@style/inner_relative_layout"
+                android:id="@+id/rl_profile"
+                android:background="@color/deep_orange">
+                <TextView
+                    style="@style/Menu_tv"
+                    android:text="profile"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

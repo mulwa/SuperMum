@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_diet"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Diet" />
+        <item
+            android:id="@+id/nav_do_donts"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Do and Dont's" />
+        <item
+            android:id="@+id/nav_progress"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Week Progress" />
+        <item
+            android:id="@+id/nav_yoga"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Yoga" />
+        <item
+            android:id="@+id/nav_emmegency"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Emmergency" />
+    </group>
+
+    <item android:title="Personal">
+        <menu>
+            <item
+                android:id="@+id/nav_appointment"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Appointments" />
+            <item
+                android:id="@+id/nav_reminder"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Reminders" />
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Profile" />
+        </menu>
+    </item>
+
+</menu>
