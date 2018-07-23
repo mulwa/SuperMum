@@ -2,55 +2,72 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_margin="@dimen/activity_vertical_margin"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.design.widget.TextInputLayout
-        style="@style/textInputLayoutStyle"
-        app:hintTextAppearance="@style/textHint">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_title"
-            android:layout_marginBottom="5dp"
-            android:hint="Title"/>
-    </android.support.design.widget.TextInputLayout>
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
 
-    <android.support.design.widget.TextInputLayout
-        style="@style/textInputLayoutStyle"
-        android:id="@+id/tilDesc"
-        app:hintTextAppearance="@style/textHint">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout
+            style="@style/textInputLayoutStyle"
+            app:hintTextAppearance="@style/textHint">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ed_name"
+                android:layout_marginBottom="5dp"
+                android:hint="Enter the name Of the Doctor"/>
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
+        <android.support.design.widget.TextInputLayout
+            style="@style/textInputLayoutStyle"
+            android:id="@+id/tilDesc"
+            app:hintTextAppearance="@style/textHint">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ed_purpose"
+                android:layout_marginBottom="5dp"
+                android:hint="Enter purpose of the appointment"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            style="@style/textInputLayoutStyle"
+            android:id="@+id/tilDate"
+            app:hintTextAppearance="@style/textHint">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/ed_date"
+                android:hint="Date"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            style="@style/textInputLayoutStyle"
+            android:id="@+id/tilTime"
+            app:hintTextAppearance="@style/textHint">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/ed_time"
+                android:hint="Time"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_desc"
-            android:layout_marginBottom="5dp"
-            android:hint="Description"/>
-    </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        style="@style/textInputLayoutStyle"
-        android:id="@+id/tilDate"
-        app:hintTextAppearance="@style/textHint">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:id="@+id/tv_date"
-            android:hint="Date"/>
-    </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        style="@style/textInputLayoutStyle"
-        android:id="@+id/tilTime"
-        app:hintTextAppearance="@style/textHint">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:id="@+id/tv_time"
-            android:hint="Time"/>
-    </android.support.design.widget.TextInputLayout>
+            android:background="@drawable/button_drawable"
+            android:text="Save"
+            android:textColor="@color/color_white"
+            android:id="@+id/btnSubmit"/>
+    </LinearLayout>
 
 
 

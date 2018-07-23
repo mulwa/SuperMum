@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar">
+
+    </include>
+
 <ScrollView android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -12,28 +23,35 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/reminder_title"
             android:layout_marginBottom="5dp"
             android:hint="Enter Reminder Title"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
+            android:id="@+id/ed_reminder_desc"
             android:hint="Enter Reminder Description"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
+            android:id="@+id/ed_date"
             android:hint="Date"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Reminder Time"
-            android:id="@+id/Time"/>
+            android:id="@+id/ed_time"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/btnSubmit"
+            android:textColor="@color/color_white"
+            android:background="@drawable/button_drawable"
             android:text="Add Reminder"/>
 
     </LinearLayout>
 </ScrollView>
+</LinearLayout>

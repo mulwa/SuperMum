@@ -1,5 +1,6 @@
 package com.example.gen.supermum;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,7 +32,7 @@ public class Reminder extends AppCompatActivity {
         m_add_reminder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showToast("adding Reminder functionality coming soon");
+               startActivity(new Intent(getApplicationContext(),addReminder.class));
 
             }
         });

@@ -1,6 +1,7 @@
 package com.example.gen.supermum;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -33,33 +34,7 @@ public class Appointments extends AppCompatActivity {
         m_add_appointment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                View appointView = LayoutInflater.from(getApplicationContext())
-                        .inflate(R.layout.add_reminder,null);
-
-                AlertDialog.Builder alerDialogBuilder  = new AlertDialog.Builder(Appointments.this);
-//                set appointmentView  to the alerDialogBuilder
-                alerDialogBuilder.setView(appointView);
-                alerDialogBuilder.setTitle("New Appointment");
-                alerDialogBuilder.setCancelable(true)
-                        .setPositiveButton("Save", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                showToast("Save clicked"+i);
-
-                            }
-                        })
-                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int i) {
-                                dialog.cancel();
-
-                            }
-                        });
-//                creat aler Dialog
-                AlertDialog alertDialog = alerDialogBuilder.create();
-//                show the dialog
-                alertDialog.show();
-
+                startActivity(new Intent(getApplicationContext(),addAppointment.class));
             }
         });
     }

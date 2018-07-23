@@ -28,7 +28,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login" />
-        <activity android:name=".emergency"></activity>
+        <activity android:name=".emergency" />
+        <activity android:name=".addAppointment" />
+        <activity android:name=".addReminder"></activity>
     </application>
 
 </manifest>

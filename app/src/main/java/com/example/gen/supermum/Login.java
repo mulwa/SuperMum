@@ -12,9 +12,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
-    public EditText musername, mpassword;
+    public EditText memail, mpassword;
     public Button btnLogin,btnCreateAccount;
-    public String username, password;
+    public String email, password;
     public Toolbar toolbar;
 
     @Override
@@ -36,7 +36,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     public void initializeUI(){
         toolbar = findViewById(R.id.toolbar);
-        musername = findViewById(R.id.edUsername);
+        memail = findViewById(R.id.edEmail);
         mpassword = findViewById(R.id.edPassword);
         btnLogin = findViewById(R.id.btnLogin);
         btnCreateAccount = findViewById(R.id.btnSubmit);
@@ -54,13 +54,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         btnCreateAccount.setOnClickListener(this);
     }
     public void getValues(){
-        username = musername.getText().toString().trim();
+        email = memail.getText().toString().trim();
         password = mpassword.getText().toString().trim();
 
     }
     public boolean validateInput(){
-        if(TextUtils.isEmpty(musername.getText().toString().trim())){
+        if(TextUtils.isEmpty(memail.getText().toString().trim())){
             showToast("Please Enter Your Username");
+            return false;
+        }if (!android.util.Patterns.EMAIL_ADDRESS.matcher(memail.getText().toString()).matches()) {
+            showToast("Please Enter a Valid Email Address");
             return false;
         }
         if(TextUtils.isEmpty(mpassword.getText().toString().trim())){
