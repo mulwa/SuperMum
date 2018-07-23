@@ -33,6 +33,7 @@
                 android:background="@color/colorPrimaryDark"
                 android:elevation="4dp"
                 android:paddingBottom="24dp">
+
                 <TextView
                     android:id="@+id/user_profile_name"
                     android:layout_width="wrap_content"
@@ -59,112 +60,139 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="General Medical Information"
                     android:layout_gravity="center"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="General Medical Information"
                     android:textColor="@color/text_color"
-                    android:fontFamily="sans-serif-condensed"/>
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
                     <TextView
                         style="@style/profile_header"
-                        android:text="Patient Id"/>
+                        android:text="Patient Id" />
+
                     <TextView
                         style="@style/profile_text"
                         android:text="P01-140985" />
                 </LinearLayout>
-                <View style="@style/Divider"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:orientation="vertical">
-                    <TextView
-                        style="@style/profile_header"
-                        android:text="Weight"/>
-                    <TextView
-                        style="@style/profile_text"
-                        android:text="85 KGs" />
-                </LinearLayout>
-                <View style="@style/Divider"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:orientation="vertical">
-                    <TextView
-                        style="@style/profile_header"
-                        android:text="Default Clinic"/>
-                    <TextView
-                        style="@style/profile_text"
-                        android:text="Jomo Kenyatta University Hospital" />
-                </LinearLayout>
-                <View style="@style/Divider"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:orientation="vertical">
-                    <TextView
-                        style="@style/profile_header"
-                        android:text="Allergies"/>
-                    <TextView
-                        style="@style/profile_text"
-                        android:text="None" />
-                </LinearLayout>
-                <View style="@style/Divider"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:orientation="vertical">
-                    <TextView
-                        style="@style/profile_header"
-                        android:text="Weeks"/>
-                    <TextView
-                        style="@style/profile_text"
-                        android:text="35wks (3rd Tresemister)" />
-                </LinearLayout>
-                <View style="@style/Divider"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:orientation="vertical">
-                    <TextView
-                        style="@style/profile_header"
-                        android:text="Doctors comments"/>
-                    <TextView
-                        style="@style/profile_text"
-                        android:text="View"/>
-                </LinearLayout>
-                <View style="@style/Divider"/>
+
+                <View style="@style/Divider" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
                     <TextView
                         style="@style/profile_header"
-                        android:text="Next Appointment Date"/>
+                        android:text="Weight" />
+
+                    <TextView
+                        style="@style/profile_text"
+                        android:text="85 KGs" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/profile_header"
+                        android:text="Default Clinic" />
+
+                    <TextView
+                        style="@style/profile_text"
+                        android:text="Jomo Kenyatta University Hospital" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/profile_header"
+                        android:text="Allergies" />
+
+                    <TextView
+                        style="@style/profile_text"
+                        android:text="None" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/profile_header"
+                        android:text="Weeks" />
+
+                    <TextView
+                        style="@style/profile_text"
+                        android:text="35wks (3rd Tresemister)" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/profile_header"
+                        android:text="Doctors comments" />
+
+                    <TextView
+                        style="@style/profile_text"
+                        android:text="View" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/profile_header"
+                        android:text="Next Appointment Date" />
+
                     <TextView
                         style="@style/profile_text"
                         android:text="12-08-2017" />
                 </LinearLayout>
-                <View style="@style/Divider"/>
+
+                <View style="@style/Divider" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_marginTop="4dp"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:weightSum="4"
-                    android:layout_height="wrap_content">
+                    android:layout_marginTop="4dp"
+                    android:weightSum="4">
 
                 </LinearLayout>
             </LinearLayout>

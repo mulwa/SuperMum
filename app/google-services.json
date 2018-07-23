@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "576388349031",
+    "firebase_url": "https://supermum-6f1e0.firebaseio.com",
+    "project_id": "supermum-6f1e0",
+    "storage_bucket": "supermum-6f1e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576388349031:android:fb3fd036bde52145",
+        "android_client_info": {
+          "package_name": "com.example.gen.supermum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576388349031-md7suc2kh66tlcv8aj6v1735lh0rbq0k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gen.supermum",
+            "certificate_hash": "194ee47d081ba63618a49ad9bce2adafa96dd1d0"
+          }
+        },
+        {
+          "client_id": "576388349031-ql4mll6fh47crlurlglla2q31mtidbat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeYUujlZEVaz3PlVyGFltd3gkjezJvtUY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576388349031-ql4mll6fh47crlurlglla2q31mtidbat.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
