@@ -9,4 +9,5 @@
     <!--main menu page dimensions-->
     <dimen name="icon_margin">10dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="row_padding_vertical">10dp</dimen>
 </resources>

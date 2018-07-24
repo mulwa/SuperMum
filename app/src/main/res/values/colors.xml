@@ -11,4 +11,7 @@
     <color name="divider_color">#9E9E9E</color>
     <color name="bottom_sheet_color">#f2f2f2</color>
     <color name="deep_orange">#bf360c</color>
+
+    <color name="year">#999999</color>
+    <color name="title">#222222</color>
 </resources>
