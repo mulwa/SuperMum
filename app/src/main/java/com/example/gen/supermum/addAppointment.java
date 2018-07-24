@@ -3,8 +3,11 @@ package com.example.gen.supermum;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -17,7 +20,10 @@ import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.example.gen.supermum.Pojo.Appointment;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -29,11 +35,13 @@ public class addAppointment extends AppCompatActivity implements View.OnClickLis
     private Button btnSubit;
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
+    private FirebaseUser currentUser;
     private DatabaseReference appointmentRef;
     private DatePickerDialog.OnDateSetListener mDataListener;
     private TimePickerDialog.OnTimeSetListener mTimeListener;
     private Calendar cal;
     private ProgressDialog mProgressDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +49,8 @@ public class addAppointment extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.add_appointment);
         initializeUi();
         mAuth = FirebaseAuth.getInstance();
-//        appointmentRef = database.getReference("appointments");
+        database = FirebaseDatabase.getInstance();
+        appointmentRef = database.getReference("appointments");
         cal =  Calendar.getInstance();
         mDataListener = new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -61,6 +70,17 @@ public class addAppointment extends AppCompatActivity implements View.OnClickLis
             }
         };
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(mAuth.getCurrentUser()  == null){
+            startActivity(new Intent(addAppointment.this,Login.class));
+        }else {
+            currentUser = mAuth.getCurrentUser();
+        }
+    }
+
     private void initializeUi(){
         toolbar = findViewById(R.id.toolbar);
         m_name = findViewById(R.id.ed_name);
@@ -148,9 +168,36 @@ public class addAppointment extends AppCompatActivity implements View.OnClickLis
 
         }else if( id == R.id.btnSubmit){
             if(validateInput()){
-                showToast("ready to submit");
+                if(currentUser != null){
+                    createApppointment(currentUser.getUid());
+                }else {
+                    showToast("Current User  Not available");
+                }
             }
         }
+    }
+    private void createApppointment(String uid){
+        showDialog();
+        String name = m_name.getText().toString().trim();
+        String purpose = m_purpose.getText().toString().trim();
+        String date = m_date.getText().toString().trim();
+        String time  = m_time.getText().toString().trim();
+
+        Appointment appointment = new Appointment(name,purpose,time,date);
+
+        appointmentRef.child(uid).push().setValue(appointment, new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
+                hideDialog();
+                if(databaseError == null){
+                    clearUi();
+                    showToast("New Appointment added Successfully");
+                }else {
+                    showToast("An error has occured Please Try Again later");
+                }
+
+            }
+        });
     }
     private void showDialog(){
         if (mProgressDialog == null) {
