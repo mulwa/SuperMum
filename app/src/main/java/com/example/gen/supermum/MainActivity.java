@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity
             lauch_do_donts();
 
         } else if (id == R.id.nav_progress) {
+            lauchProgress();
 
         } else if (id == R.id.nav_yoga) {
 
@@ -142,7 +143,7 @@ public class MainActivity extends AppCompatActivity
                lauch_do_donts();
                 break;
             case R.id.rl_progress:
-                showToast("week by Week Progress comming");
+                lauchProgress();
             case R.id.rl_yoga:
                 showToast("Yoga Comming soon");
                 break;
@@ -165,6 +166,10 @@ public class MainActivity extends AppCompatActivity
     public void  showToast(String msg){
         Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
 
+    }
+
+    public void lauchProgress(){
+        startActivity(new Intent(getApplicationContext(),weekbywek.class));
     }
     public void launchReminder(){
         startActivity(new Intent(getApplicationContext(),Reminder.class));

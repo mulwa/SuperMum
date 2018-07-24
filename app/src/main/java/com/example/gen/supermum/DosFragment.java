@@ -39,8 +39,13 @@ public class DosFragment extends Fragment {
         listDataHeader.add("Top 250");
         listDataHeader.add("Now Showing");
         listDataHeader.add("Coming Soon..");
+        listDataHeader.add("Stay Positive");
+
 
         // Adding child data
+        List<String> staypositive  = new ArrayList<>();
+        staypositive.add("Pregrnancies are not always joyful. surround yourself in a positive  " +
+                "environment");
         List<String> top250 = new ArrayList<String>();
         top250.add("The Shawshank Redemption");
         top250.add("The Godfather");
@@ -68,5 +73,6 @@ public class DosFragment extends Fragment {
         listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
         listDataChild.put(listDataHeader.get(1), nowShowing);
         listDataChild.put(listDataHeader.get(2), comingSoon);
+        listDataChild.put(listDataHeader.get(3),staypositive);
     }
 }
