@@ -180,7 +180,7 @@ public class creatAccount extends AppCompatActivity {
             showToast("Please confirm Your Password");
             return false;
         }
-        if( mPassword.getText().toString().trim() != mPassword2.getText().toString().trim()){
+        if( !mPassword.getText().toString().trim().equals(mPassword2.getText().toString().trim())){
             showToast("Password confirmation Did not match");
             return false;
         }

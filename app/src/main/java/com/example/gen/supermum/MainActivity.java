@@ -18,9 +18,19 @@ import android.view.MenuItem;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
-    public RelativeLayout m_diet,m_do_donts,m_progress,m_yoga,m_emmergency,m_appointments,m_reminder,m_profile;
+    public RelativeLayout m_diet,m_do_donts,m_progress,m_yoga,m_emmergency,
+            m_appointments,m_reminder,m_profile;
+    private FirebaseAuth mAuth;
+    private DatabaseReference databaseReference;
+    private FirebaseDatabase  database;
+    private FirebaseUser  currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +38,11 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        mAuth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+
 
         initializeView();
-
-
-
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -43,6 +51,14 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(mAuth.getCurrentUser() ==null){
+            startActivity(new Intent(getApplicationContext(),Login.class));
+        }
     }
 
     @Override
@@ -125,6 +141,10 @@ public class MainActivity extends AppCompatActivity
         }else if (id == R.id.nav_profile){
             lauchProfile();
 
+        }else if (id ==  R.id.nav_logout){
+            if(mAuth.getCurrentUser()  != null){
+                mAuth.signOut();
+            }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

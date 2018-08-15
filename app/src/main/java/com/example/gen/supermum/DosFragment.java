@@ -36,39 +36,30 @@ public class DosFragment extends Fragment {
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
-        listDataHeader.add("Top 250");
-        listDataHeader.add("Now Showing");
-        listDataHeader.add("Coming Soon..");
-        listDataHeader.add("Stay Positive");
+        listDataHeader.add("Stay positive");
+        listDataHeader.add("Folic acid");
+        listDataHeader.add("Eat well");
+        listDataHeader.add("Exercises");
 
 
         // Adding child data
         List<String> staypositive  = new ArrayList<>();
         staypositive.add("Pregrnancies are not always joyful. surround yourself in a positive  " +
-                "environment");
+                "environment. It can help you relax and enjoy your pregnancy better, " +
+                "flooding your baby with pleasant emotions");
+
         List<String> top250 = new ArrayList<String>();
-        top250.add("The Shawshank Redemption");
-        top250.add("The Godfather");
-        top250.add("The Godfather: Part II");
-        top250.add("Pulp Fiction");
-        top250.add("The Good, the Bad and the Ugly");
-        top250.add("The Dark Knight");
-        top250.add("12 Angry Men");
+        top250.add("Folic acids have one acid tablets daily when you are pregnant");
+
 
         List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("The Conjuring");
-        nowShowing.add("Despicable Me 2");
-        nowShowing.add("Turbo");
-        nowShowing.add("Grown Ups 2");
-        nowShowing.add("Red 2");
-        nowShowing.add("The Wolverine");
+        nowShowing.add("Eat well have a home cooked meal, avoid junk. Watch your weight every month you have to put " +
+                "on atleast one kilogram");
+
 
         List<String> comingSoon = new ArrayList<String>();
-        comingSoon.add("2 Guns");
-        comingSoon.add("The Smurfs 2");
-        comingSoon.add("The Spectacular Now");
-        comingSoon.add("The Canyons");
-        comingSoon.add("Europa Report");
+        comingSoon.add("Exercises you have to walk at least 15 to 20 minutes a day. Aerobic classes are also a good option." +
+                "Dress up well choose loose fitting dresses and comfortable footware");
 
         listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
         listDataChild.put(listDataHeader.get(1), nowShowing);

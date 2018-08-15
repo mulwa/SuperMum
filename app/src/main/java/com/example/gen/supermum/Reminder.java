@@ -1,5 +1,6 @@
 package com.example.gen.supermum;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -10,10 +11,20 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Reminder extends AppCompatActivity {
     public Toolbar  m_toolbar;
     public RecyclerView m_rv_reminder;
     public FloatingActionButton m_add_reminder;
+    private ProgressDialog mProgressDialog;
+    private FirebaseDatabase database;
+    private FirebaseAuth mAuth;
+    private FirebaseUser currentUser;
+    private DatabaseReference reminderRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

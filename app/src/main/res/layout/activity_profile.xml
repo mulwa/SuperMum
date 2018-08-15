@@ -76,11 +76,12 @@
 
                     <TextView
                         style="@style/profile_header"
-                        android:text="Patient Id" />
+                        android:text="Patient Mobile No" />
 
                     <TextView
                         style="@style/profile_text"
-                        android:text="P01-140985" />
+                        android:id="@+id/tv_mobile"
+                        android:hint="mulwtech@gmail.com" />
                 </LinearLayout>
 
                 <View style="@style/Divider" />
@@ -93,11 +94,12 @@
 
                     <TextView
                         style="@style/profile_header"
-                        android:text="Weight" />
+                        android:text="Email" />
 
                     <TextView
                         style="@style/profile_text"
-                        android:text="85 KGs" />
+                        android:id="@+id/tv_email"
+                        android:hint="gmail.com" />
                 </LinearLayout>
 
                 <View style="@style/Divider" />
@@ -110,28 +112,11 @@
 
                     <TextView
                         style="@style/profile_header"
-                        android:text="Default Clinic" />
+                        android:text="Conception Date" />
 
                     <TextView
                         style="@style/profile_text"
-                        android:text="Jomo Kenyatta University Hospital" />
-                </LinearLayout>
-
-                <View style="@style/Divider" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <TextView
-                        style="@style/profile_header"
-                        android:text="Allergies" />
-
-                    <TextView
-                        style="@style/profile_text"
-                        android:text="None" />
+                        android:id="@+id/tv_conception_date"/>
                 </LinearLayout>
 
                 <View style="@style/Divider" />
@@ -148,41 +133,8 @@
 
                     <TextView
                         style="@style/profile_text"
+                        android:id="@+id/tv_weeks"
                         android:text="35wks (3rd Tresemister)" />
-                </LinearLayout>
-
-                <View style="@style/Divider" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <TextView
-                        style="@style/profile_header"
-                        android:text="Doctors comments" />
-
-                    <TextView
-                        style="@style/profile_text"
-                        android:text="View" />
-                </LinearLayout>
-
-                <View style="@style/Divider" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <TextView
-                        style="@style/profile_header"
-                        android:text="Next Appointment Date" />
-
-                    <TextView
-                        style="@style/profile_text"
-                        android:text="12-08-2017" />
                 </LinearLayout>
 
                 <View style="@style/Divider" />
